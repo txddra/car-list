@@ -9,6 +9,18 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+
+
+
+
+mongoose.connect(process.env.MONGODB_URI,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+})
+.then(()=> console.log('MongoDB Connected')).catch((err)=> console.log(`MongoDB Error ${err}`))
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
