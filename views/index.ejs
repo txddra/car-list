@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    <% console.log(carsList) %> 
+    <%if(carsList.length){ carsList.forEach(element =>{ %>
+      <p><a href ="/words/single-word/<%=element.id%>"%></a><%=element.word%></a></p>
+  <%  })} else{ %> 
+ 
+<h1>No words found</h1>
+
+ <% } %> 
+
+    
+</body>
+</html>
